@@ -53,3 +53,54 @@ const swiper = new Swiper('.swiper', { // Inicializa um novo objeto Swiper no el
     }
   }
 });
+
+/* ScrollReveal */
+// Criação de uma instância do ScrollReveal (plugin de animação de scroll)
+const scrollReveal = ScrollReveal({
+  origin: 'top', // Define a origem da animação como o topo da página
+  distance: '30px', // Define a distância de deslocamento dos elementos animados como 30 pixels
+  duration: 700, // Define a duração da animação em milissegundos como 700ms (0,7 segundos)
+  reset: true // Define se a animação deve ser resetada quando o elemento sair da tela como verdadeiro
+});
+
+// Aplica a animação ScrollReveal aos elementos selecionados
+scrollReveal.reveal(
+  `#home .image, #home .text,
+  #about .image, #about .text,
+  #services header, #services .card,
+  #testimonials header, #testimonials .testimonials
+  #contact .text, #contact .links
+  `,
+  { interval: 100 } // Define o intervalo de tempo entre cada animação como 100ms (0,1 segundos)
+);
+
+/* Active menu */
+// Função para ativar o item de menu correspondente à seção atual
+function activateMenuAtCurrentSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4; // Calcula o ponto de verificação (checkpoint) com base na posição atual do scroll e na altura da janela
+
+  for (const section of sections) { // Percorre todas as seções selecionadas
+    const sectionTop = section.offsetTop; // Obtém a posição superior da seção em relação ao topo da página
+    const sectionHeight = section.offsetHeight; // Obtém a altura da seção
+    const sectionId = section.getAttribute('id'); // Obtém o ID da seção
+    const checkpointStart = checkpoint >= sectionTop; // Verifica se o checkpoint está depois do início da seção
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight; // Verifica se o checkpoint está antes do fim da seção
+
+    if (checkpointStart && checkpointEnd) { // Se o checkpoint estiver dentro dos limites da seção
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']') // Seleciona o item de menu correspondente à seção atual com base no ID
+        .classList.add('active'); // Adiciona a classe 'active' ao item de menu
+    } else { // Caso contrário
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']') // Seleciona o item de menu correspondente à seção atual com base no ID
+        .classList.remove('active'); // Remove a classe 'active' do item de menu
+    }
+  }
+}
+
+/* Change scroll and Back to top button*/
+window.addEventListener('scroll', function() { // Adiciona um ouvinte de evento de rolagem na janela
+  changeHeaderWhenScroll(); // Chama a função para alterar o estilo do cabeçalho quando o scroll ocorre
+  backToTop(); // Chama a função para mostrar ou ocultar o botão "Voltar ao topo" com base na posição do scroll
+  activateMenuAtCurrentSection(); // Chama a função para ativar o item de menu correspondente à seção atual com base na posição do scroll
+});
