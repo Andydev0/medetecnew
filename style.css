@@ -1,0 +1,41 @@
+/==================== CSS RESET ====================/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/==================== VARIAVEIS ====================/
+:root {
+  --header-height: 4.5rem;
+
+  /* Colors */
+  --hue: 140;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 46% 47%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 26%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+
+  /* Fontes */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: "Poppins", sans-serif;
+  --body-font: "DM Sans", sans-serif;
+}
+
+/==================== BASE ====================/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 1rem var(--body-font);
+  color: var(--text-color);
+  background: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+}
