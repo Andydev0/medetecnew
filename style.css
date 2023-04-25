@@ -177,3 +177,29 @@ nav ul li a::after {
   bottom: -1rem;
   transition: width 0.2s;
 }
+
+
+/* Active scroll and active (start) */
+
+#header.scroll nav ul li a:hover,
+#header.scroll nav ul li a.active {
+  color: var(--base-color-alt);
+} 
+
+#header.scroll nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: var(--base-color-alt);
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  transition: width 0.2s;
+}
+
+#header.scroll nav ul li a:hover::after,
+#header.scroll nav ul li a.active::after {
+  width: 100%;
+}
+
+/* Active scroll and active (end) */
