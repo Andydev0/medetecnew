@@ -90,6 +90,8 @@ img {
 }
 
 /==================== LAYOUT ====================/
+
+
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -114,4 +116,64 @@ img {
 
 .section header strong {
   color: var(--base-color);
+}
+
+#header.scroll .logo span {
+  color: #fff;
+  transition: 0.3s;
+}
+
+#header.scroll .icon-menu {
+  color: #fff;
+  transition: 0.3s;
+}
+
+/*==================== LOGO ====================*/
+
+.logo {
+  font: 700 1.31rem var(--title-font);
+  color: var(--title-color);
+}
+
+.logo span {
+  color: var(--base-color);
+}
+
+.logo-alt span {
+  color: var(--body-color);
+}
+
+/*==================== NEVAGAÇÃO ====================*/
+
+nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: 0.2s;
+  position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--base-color);
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: var(--base-color);
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  transition: width 0.2s;
 }
