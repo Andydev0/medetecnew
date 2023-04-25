@@ -39,3 +39,16 @@ body {
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
