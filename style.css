@@ -1,11 +1,11 @@
-/==================== CSS RESET ====================/
+/*==================== CSS RESET ====================*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/==================== VARIAVEIS ====================/
+/*==================== VARIAVEIS ====================*/
 :root {
   --header-height: 4.5rem;
 
@@ -28,7 +28,7 @@
   --body-font: "DM Sans", sans-serif;
 }
 
-/==================== BASE ====================/
+/*==================== BASE ====================*/
 html {
   scroll-behavior: smooth;
 }
@@ -203,3 +203,42 @@ nav ul li a::after {
 }
 
 /* Active scroll and active (end) */
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  top: -20rem;
+  transition: 0.2s;
+}
+
+nav .menu ul {
+  display: none;
+}
+
+/*==================== MOSTRAR MENU ====================*/
+
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+  background: var(--body-color);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+}
+
+nav.show .menu ul {
+  display: grid;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
