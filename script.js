@@ -1,75 +1,55 @@
-const nav = document.querySelector('.container'); // Seleciona o elemento de navegação
-const toggle = document.querySelectorAll('nav .toggle'); // Seleciona os botões de toggle do menu
-const links = document.querySelectorAll('nav ul li a'); // Seleciona os links do menu
-const header = document.querySelector('#header'); // Seleciona o cabeçalho
-const backToTopButton = document.querySelector('.back-to-top'); // Seleciona o botão de "Voltar ao topo"
-const navHeight = header.offsetHeight; // Obtém a altura do cabeçalho para ser usada como referência
-const sections = document.querySelectorAll('main section[id]'); // Seleciona as seções principais com IDs
+// Selecionando elementos do DOM
+const nav = document.querySelector('.container'); // Seleciona o elemento do DOM com a classe 'container' e o armazena na constante 'nav'
+const toggle = document.querySelectorAll('nav .toggle'); // Seleciona todos os elementos com a classe 'toggle' dentro do elemento 'nav' e os armazena na constante 'toggle'
+const links = document.querySelectorAll('nav ul li a'); // Seleciona todos os elementos 'a' dentro de 'nav ul li' e os armazena na constante 'links'
+const header = document.querySelector('#header'); // Seleciona o elemento do DOM com o id 'header' e o armazena na constante 'header'
+const backToTopButton = document.querySelector('.back-to-top'); // Seleciona o elemento do DOM com a classe 'back-to-top' e o armazena na constante 'backToTopButton'
+const navHeight = header.offsetHeight; // Armazena a altura do elemento 'header' na constante 'navHeight'
+const sections = document.querySelectorAll('main section[id]'); // Seleciona todos os elementos 'section' que possuem o atributo 'id' dentro do elemento 'main' e os armazena na constante 'sections'
 
+// Função para mudar a aparência do header quando a página é rolada
 function changeHeaderWhenScroll() {
-  window.scrollY >= navHeight // Verifica se o valor do scroll vertical é maior ou igual à altura do cabeçalho
-    ? header.classList.add('scroll') // Adiciona a classe 'scroll' ao cabeçalho se for verdadeiro
-    : header.classList.remove('scroll'); // Remove a classe 'scroll' do cabeçalho se for falso
+  window.scrollY >= navHeight // Se a posição vertical do scroll da janela for maior ou igual à altura do header
+    ? header.classList.add('scroll') // Adiciona a classe 'scroll' ao elemento 'header'
+    : header.classList.remove('scroll'); // Remove a classe 'scroll' do elemento 'header'
 }
 
+// Função para mostrar ou esconder o botão "Voltar ao topo" com base na posição do scroll
 function backToTop() {
-  if (window.scrollY >= 560) { // Verifica se o valor do scroll vertical é maior ou igual a 560
-    backToTopButton.classList.add('show'); // Adiciona a classe 'show' ao botão de "Voltar ao topo" se for verdadeiro
+  if (window.scrollY >= 560) { // Se a posição vertical do scroll da janela for maior ou igual a 560 pixels
+    backToTopButton.classList.add('show'); // Adiciona a classe 'show' ao elemento 'backToTopButton'
   } else {
-    backToTopButton.classList.remove('show'); // Remove a classe 'show' do botão de "Voltar ao topo" se for falso
+    backToTopButton.classList.remove('show'); // Remove a classe 'show' do elemento 'backToTopButton'
   }
 }
 
-/* Botão de Toggle */
-for (const element of toggle) {
-  element.addEventListener('click', () => nav.classList.toggle('show')); // Adiciona um ouvinte de evento de clique aos botões de toggle para alternar a classe 'show' no elemento de navegação
+/* Botão de alternância (toggle) */
+for (const element of toggle) { // Para cada elemento na lista 'toggle'
+  element.addEventListener('click', () => nav.classList.toggle('show')); // Adiciona um ouvinte de evento de clique que alterna a classe 'show' no elemento 'nav'
 }
 
 /* Links */
-for (const link of links) {
-  link.addEventListener('click', () => nav.classList.remove('show')); // Adiciona um ouvinte de evento de clique aos links do menu para remover a classe 'show' do elemento de navegação
+for (const link of links) { // Para cada elemento na lista 'links'
+  link.addEventListener('click', () => nav.classList.remove('show')); // Adiciona um ouvinte de evento de clique que remove a classe 'show' do elemento 'nav'
 }
 
-/* Testemunhas - SwiperJS */
-const swiper = new Swiper('.swiper', { // Inicializa o SwiperJS para o elemento com a classe 'swiper'
+/* Testimonials - SwiperJS */
+// Configuração do SwiperJS para os depoimentos
+const swiper = new Swiper('.swiper', { // Inicializa um novo objeto Swiper no elemento com a classe 'swiper'
   slidesPerView: 1, // Define o número de slides visíveis por vez como 1
-  pagination: {
-    el: '.swiper-pagination', // Define o seletor do elemento de paginação
+  pagination: { // Configuração da paginação
+    el: '.swiper-pagination', // Seleciona o elemento com a classe 'swiper-pagination' como o container da paginação
   },
   autoplay: {
-    delay: 2500, // Define o tempo de delay do autoplay em milissegundos
-    disableOnInteraction: false, // Define se o autoplay é desativado ou não quando há interação do usuário
+    delay: 2500, // Define o atraso em milissegundos entre a transição automática dos slides como 2500ms (2,5 segundos)
+    disableOnInteraction: false, // Define se a transição automática dos slides deve ser desabilitada quando o usuário interagir com o swiper como falso
   },
-  mousewheel: false, // Define se o mousewheel é habilitado ou não
-  keyboard: true, // Define se o uso do teclado é habilitado ou não
-  breakpoints: {
-    767: {
-      slidesPerView: 2, // Define o número de slides visíveis por vez como 2 quando a largura de tela é menor que 767px
-      setWrapperSize: true // Define se o tamanho do wrapper é ajustado automaticamente ou não
+  mousewheel: false, // Define se o scroll do mouse deve controlar a transição dos slides como falso
+  keyboard: true, // Define se as teclas do teclado devem controlar a transição dos slides como verdadeiro
+  breakpoints: { // Configuração dos pontos de quebra (breakpoints) para responsividade
+    767: { // Quando a largura da tela for igual ou inferior a 767 pixels
+      slidesPerView: 2, // Define o número de slides visíveis por vez como 2
+      setWrapperSize: true // Define se o tamanho do wrapper (container) do swiper deve ser ajustado automaticamente com base no tamanho dos slides como verdadeiro
     }
   }
-});
-
-/* ScrollReveal */
-const scrollReveal = ScrollReveal({ // Inicializa o ScrollReveal
-  origin: 'top', // Define a origem da animação como sendo o topo
-  distance: '30px', // Define a distância de início da animação em relação ao topo
-  duration: 700, // Define a duração da animação em milissegundos
-  reset: true // Define se a animação é resetada após o scroll ou não
-});
-
-scrollReveal.reveal( // Aplica a animação ScrollReveal em cada seção principal selecionada
-  main section: not(.grid).content, footer.brand, footer.social, // Define os elementos que serão animados
-  { interval: 100 } // Define o intervalo entre cada animação em milissegundos
-);
-
-/* Back to Top button */
-backToTopButton.addEventListener('click', () => { // Adiciona um ouvinte de evento de clique ao botão de "Voltar ao topo"
-  window.scrollTo({ top: 0, behavior: 'smooth' }); // Efetua o scroll suave até o topo da página
-});
-
-/* Scroll events */
-window.addEventListener('scroll', () => { // Adiciona um ouvinte de evento de scroll à janela do navegador
-  changeHeaderWhenScroll(); // Chama a função para alterar o cabeçalho quando o scroll ocorre
-  backToTop(); // Chama a função para mostrar ou ocultar o botão de "Voltar ao topo" quando o scroll ocorre
 });
