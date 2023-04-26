@@ -536,3 +536,59 @@ footer .social a:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+/*==================== MEDIA QUERIES ====================*/
+/* extra large devices: 1200> */
+@media (min-width: 1080px) {
+  /* Classes reutilizável */
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 10rem 0;
+  }
+  
+  .section header, #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    height: 3.125rem;
+  }
+
+  /* Navegação */
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+  }
+
+  #header.scroll nav .menu ul li a.title {
+    color: #fff;
+  }
+  
+  nav .icon-menu {
+    display: none;
+  }
