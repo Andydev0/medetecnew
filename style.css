@@ -368,11 +368,18 @@ nav.show div.icon-close {
   text-align: center;
 }
 
+
+
 .card i {
   display: block;
-  margin-bottom: 1.5rem;
-  font-size: 5rem;
+  margin-bottom: 3.5rem;
+  font-size: 6rem;
   color: var(--base-color);
+  transition: transform 0.5s
+}
+
+.card i:hover {
+  transform: scale(1.2);
 }
 
 .card .title {
@@ -497,7 +504,7 @@ footer .brand p {
 }
 
 footer i {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--text-color-light);
 }
 
@@ -690,3 +697,98 @@ footer .social a:hover {
   }
 }
 /* medium devices: 767> */
+
+
+
+/* Estilos para o popup de login */
+#loginPopup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+#loginForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 500px; /* altere o tamanho para o que desejar */
+  max-width: 90%; /* evita que o formulário seja maior do que a largura da tela */
+}
+
+#loginForm h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#loginForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"]{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px; /* altere o tamanho da fonte para o que desejar */
+  padding-left: 30px; /* espaço entre o ícone e a borda esquerda da caixa de entrada */
+}
+
+#loginForm input[type="text"]:focus,
+#loginForm input[type="password"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+#loginForm button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* altere o tamanho da fonte para o que desejar */
+  transition: background-color 0.3s ease;
+}
+
+#loginForm button[type="submit"]:hover {
+  background-color: #0062cc;
+}
+
+
+#forgotPassword {
+  display: block;
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #007bff;
+  font-size: 16px; /* altere o tamanho da fonte para o que desejar */
+}
+
+
+#loginForm label {
+  position: relative;
+}
+
+#loginForm .input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+

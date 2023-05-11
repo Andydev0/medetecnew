@@ -104,3 +104,25 @@ window.addEventListener('scroll', function() { // Adiciona um ouvinte de evento 
   backToTop(); // Chama a função para mostrar ou ocultar o botão "Voltar ao topo" com base na posição do scroll
   activateMenuAtCurrentSection(); // Chama a função para ativar o item de menu correspondente à seção atual com base na posição do scroll
 });
+
+
+
+
+// Captura o elemento de login na navbar
+const loginBtn = document.querySelector("#loginBtn");
+
+// Captura o popup de login
+const loginPopup = document.querySelector("#loginPopup");
+
+// Adiciona um evento de clique ao elemento de login na navbar
+loginBtn.addEventListener("click", function(e) {
+  e.preventDefault();
+  loginPopup.style.display = "flex";
+});
+
+// Fecha o popup de login quando o usuário clica fora dele
+loginPopup.addEventListener("click", function(e) {
+  if (e.target === loginPopup) {
+    loginPopup.style.display = "none";
+  }
+});

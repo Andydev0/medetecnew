@@ -27,7 +27,10 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <!-------------------- FONT AWESOME -------------------->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+
+  <script src="https://kit.fontawesome.com/6d4c92c12c.js" crossorigin="anonymous"></script>
+
 
 
 </head>
@@ -45,7 +48,7 @@
           <li><a class="title" href="#services">Serviços</a></li>
           <li><a class="title" href="#testimonials">Clientes</a></li>
           <li><a class="title" href="#contact">Contato</a></li>
-          <li><a class="title" href="#login">Login</a></li>
+          <li><a class="title" href="#" id="loginBtn">Login</a></li>
         </ul>
       </div>
 
@@ -59,12 +62,14 @@
     <section class="section" id="home">
       <div class="container grid">
         <div class="image">
-          <img src ="assets/img/img1.jpg" alt="imagem inicio" />
+          <img src="assets/img/img1.jpg" alt="imagem inicio" />
         </div>
         <div class="text">
           <h2 class="title">MedEtec</h2>
           <p>
-            colocar alguma coisa...
+            MedEtec é uma clínica de medicina que oferece uma ampla gama de serviços de saúde, incluindo consultas
+            médicas, exames diagnósticos, tratamentos e cirurgias. Seu objetivo é fornecer atendimento médico de
+            qualidade aos pacientes, utilizando tecnologias avançadas e uma equipe de profissionais qualificados.
           </p>
           <a class="button" href="#contact">Entrar em contato</a>
         </div>
@@ -72,6 +77,27 @@
     </section>
 
     <div class="divider-1"></div>
+
+    <!-- Popup de login -->
+    <div id="loginPopup">
+      <form id="loginForm" action="#" method="post">
+        <h2>Login</h2>
+        <label for="username">
+          <input type="text" id="username" name="username" placeholder="Usuário" required>
+          <span class="input-icon"><i class="fas fa-user"></i></span>
+        </label>
+        <label for="password">
+          <input type="password" id="password" name="password" placeholder="Senha" required>
+          <span class="input-icon"><i class="fas fa-lock"></i></span>
+        </label>
+        <a id="forgotPassword" href="#">Esqueceu sua senha?</a>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+
+
+
+
 
     <!-------------------- SOBRE -------------------->
     <section class="section" id="about">
@@ -81,8 +107,15 @@
         </div>
         <div class="text">
           <h2 class="title">Sobre Nós</h2>
-          <p>Primeiro paragrafo.</p><br>
-          <p>Segundo paragrafo</p><br>
+          <p> A MedEtec é uma clínica de medicina que busca fornecer serviços de saúde de alta qualidade e excelência
+            aos seus pacientes. A equipe médica é formada por profissionais altamente capacitados e especializados em
+            diferentes áreas, que utilizam tecnologias avançadas e modernas para oferecer diagnósticos precisos e
+            tratamentos eficazes.</p><br>
+          <p>Além disso, a clínica oferece uma ampla variedade de serviços de saúde, que incluem consultas médicas,
+            exames diagnósticos, tratamentos e cirurgias, tudo isso em um ambiente acolhedor e confortável, que visa
+            garantir o bem-estar e a satisfação dos pacientes. Com um atendimento personalizado e humanizado, a MedEtec
+            busca proporcionar uma experiência única e diferenciada para os seus pacientes, sempre com foco na
+            prevenção, no tratamento e na manutenção da saúde.</p><br>
         </div>
     </section>
 
@@ -101,37 +134,55 @@
         <div class="cards grid">
 
           <div class="card">
-            <i class="fa fa-ambulance"></i>
-            <h3 class="title">Especilidade 1</h3>
-            <p>Paragrafo Especilidade 1</p>
+            <i class="fa-solid fa-brain fa-sm" style="color: #41af65;"></i>
+            <h3 class="title">Psicologia</h3>
+            <p>Avaliação psicológica, Psicoterapia, Aconselhamento psicológico, Orientação profissional, Psicologia
+              escolar, Psicologia do esporte, Psicologia hospitalar.</p>
           </div>
 
           <div class="card">
-            <i class="icon2"></i>
-            <h3 class="title">Especialidade 2</h3>
-            <p>Paragrafo Especialidade 2</p>
+            <i class="fa-solid fa-tooth fa-sm" style="color: #41af65;"></i>
+            <h3 class="title">Odontologia</h3>
+            <p>Limpeza e profilaxia, Obturação, Tratamento de canal, Extração dentária, Implante dentário, Clareamento
+              dental, Ortodontia, Prótese dentária, Periodontia, Odontopediatria, Cirurgia oral.
+            </p>
           </div>
 
           <div class="card">
-            <i class="icon3"></i>
-            <h3 class="title">Especialidade 3</h3>
-            <p>Paragrafo Especialidade 3</p>
+            <i class="fa-solid fa-heart-pulse fa-sm" style="color: #41af65;"></i>
+            <h3 class="title">Cardiologia</h3>
+            <p>Consulta cardiológica, Testes de diagnóstico, Cateterismo
+              cardíaco, Angioplastia para desobstruir artérias coronárias, Cirurgia cardíaca, Implante de marcapasso,
+              Tratamento de arritmias cardíacas, Tratamento de
+              insuficiência cardíaca.</p>
           </div>
 
           <div class="card">
-            <i class="icon4"></i>
-            <h3 class="title">Especialidade 4</h3>
-            <p>Paragrafo Especialidade 4</p>
+            <i class="fa-solid fa-lungs fa-sm" style="color: #41af65;"></i>
+            <h3 class="title">Pneumologista</h3>
+            <p>Consulta pneumológica, Testes de diagnóstico, Avaliação da
+              função pulmonar, Tratamento de doenças respiratórias, Tratamento de
+              distúrbios do sono, Avaliação pré-operatória para cirurgia torácica, Reabilitação
+              pulmonar, Tratamento de tuberculose e outras infecções respiratórias, Aconselhamento para parar de fumar.
+            </p>
           </div>
           <div class="card">
-            <i class="icon5"></i>
-            <h3 class="title">Especialidade 5</h3>
-            <p>Paragrafo Especialidade 5</p>
+            <i class="fa-solid fa-eye fa-sm" style="color: #41af65;"></i>
+            <h3 class="title">Oftalmologista</h3>
+            <p>Consulta oftalmológica, Testes de diagnóstico, Prescrição de óculos e lentes de contato, Cirurgia
+              refrativa, Cirurgia de catarata, Cirurgia de glaucoma, Tratamento de doenças da retina, Tratamento de
+              doenças da córnea, Tratamento de estrabismo, Tratamento de doenças das pálpebras e vias
+              lacrimais.
+            </p>
           </div>
           <div class="card">
-            <i class="icon6"></i>
-            <h3 class="title">Especialidade 6</h3>
-            <p>Paragrafo Especialidade 6</p>
+            <i class="fa-solid fa-syringe fa-sm" style="color: #41af65;"></i>
+            <h3 class="title">Vacinação</h3>
+            <p>Vacinação infantil, Vacinação para adultos, Vacinas para viajantes (como febre amarela e hepatite A),
+              Vacinas para idosos, Vacinas contra doenças infecciosas (como influenza, hepatite B, varicela, sarampo,
+              caxumba, rubéola, HPV, meningite, pneumonia e outras), Aconselhamento sobre imunização, Verificação do
+              estado vacinal.
+            </p>
           </div>
         </div>
       </div>
@@ -156,8 +207,8 @@
                   distinctio atque, ea expedita cumque autem libero.
                 </p>
                 <cite>
-                  <img src="pessoa1.jpg" alt="">
-                  Nome da pessoa 1 - CEO
+                  <img src="https://randomuser.me/api/portraits/men/81.jpg" alt="">
+                  Todd Curtis
                 </cite>
               </blockquote>
             </div>
@@ -170,8 +221,8 @@
                   distinctio atque, ea expedita cumque autem libero.
                 </p>
                 <cite>
-                  <img src="pessoa2.jpg" alt="">
-                  Nome da pessoa 2 - CTO
+                  <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                  Chad Sanchez
                 </cite>
               </blockquote>
             </div>
@@ -184,8 +235,8 @@
                   distinctio atque, ea expedita cumque autem libero.
                 </p>
                 <cite>
-                  <img src="pessoa3.jpg" alt="">
-                  Nome da pessoa 3 - C00
+                  <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="">
+                  Kathryn Williamson
                 </cite>
               </blockquote>
             </div>
@@ -208,7 +259,8 @@
           <p>Entre em contato com a <strong>Med<span>Etec</span></strong>, queremos
             tirar suas dúvidas, ouvir suas críticas e sugestões.
           </p>
-          <a href="https://wa.me/+5599996666" class="button" target="_blank"><i class="icon-whatsapp"></i>Entrar em contato</a>
+          <a href="https://wa.me/+5599996666" class="button" target="_blank"><i class="icon-whatsapp"></i>Entrar em
+            contato</a>
         </div>
 
         <div class="links">
@@ -235,14 +287,14 @@
       </div>
 
       <div class="social grid">
-        <a href="" target="_blank"><i class="icon-instagram">#</i></a>
-        <a href="" target="_blank"><i class="icon-linkedin">#</i></a>
-        <a href="" target="_blank"><i class="icon-facebook">#</i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-square-google-plus"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
       </div>
     </div>
   </footer>
 
-  <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
+  <a href="#home" class="back-to-top"><i class="fa-sharp fa-solid fa-arrow-up"></i></a>
 
   <!-------------------- SWIPERJS -------------------->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
