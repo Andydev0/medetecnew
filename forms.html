@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <title>MedEtec</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-------------------- SWIPER JS -------------------->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-------------------- STYLES -------------------->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="forms.css">
+
+  <!-------------------- FONTS -------------------->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-------------------- RUBIK -------------------->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-------------------- POPPINS -------------------->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-------------------- DM SANS -------------------->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-------------------- FONT AWESOME -------------------->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+
+  <script src="https://kit.fontawesome.com/6d4c92c12c.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+
+  <!-------------------- HEADER -------------------->
+  <header id="header">
+    <nav class="container" id="menu">
+      <a class="logo" href="#">Med<span>Etec</span>.</a>
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="#home">Início</a></li>
+          <li><a class="title" href="#about">Sobre</a></li>
+          <li><a class="title" href="#services">Serviços</a></li>
+          <li><a class="title" href="#testimonials">Clientes</a></li>
+          <li><a class="title" href="#contact">Contato</a></li>
+          <li><a class="title" href="#" id="loginBtn">Login</a></li>
+        </ul>
+      </div>
+
+      <div class="toggle icon-menu"></div>
+      <div class="toggle icon-close"></div>
+    </nav>
+  </header>
+
+  <!-------------------- FORMULARIO -------------------->
+
+  <form>
+    <fieldset>
+      <legend>Informações Pessoais</legend>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="form-group">
+          <label for="sobrenome">Sobrenome:</label>
+          <input type="text" id="sobrenome" name="sobrenome" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cep">CEP:</label>
+          <input type="number" id="cep" name="cep" required>
+        </div>
+
+        <div class="form-group">
+          <label for="numero">Número:</label>
+          <input type="number" id="numero" name="numero" required>
+        </div>
+
+        <div class="form-group">
+          <label for="bairro">Bairro:</label>
+          <input type="text" id="bairro" name="bairro" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+
+
+        <div class="form-group">
+          <label for="estado">Estado:</label>
+          <select id="estado" name="estado" required>
+            <option value="">Selecione...</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" name="cidade" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nascimento">Data de Nascimento:</label>
+          <input type="date" id="nascimento" name="nascimento" required>
+        </div>
+
+        <div class="form-group">
+          <label for="escolaridade">Escolaridade:</label>
+          <select id="escolaridade" name="escolaridade" required>
+            <option value="">Selecione...</option>
+            <option value="fundamental">Fundamental</option>
+            <option value="medio">Médio</option>
+            <option value="superior">Superior</option>
+            <option value="pos">Pós-Graduação</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="estado-civil">Estado Civil:</label>
+          <select id="estado-civil" name="estado-civil" required>
+            <option value="">Selecione...</option>
+            <option value="solteiro">Solteiro</option>
+            <option value="casado">Casado</option>
+            <option value="divorciado">Divorciado</option>
+            <option value="viuvo">Viúvo</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="observacao">Observação:</label>
+          <textarea id="observacao" name="observacao"></textarea>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group" id="enviar">
+          <button type="submit">Enviar</button>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+
+
+
+
+
+
+  <!-------------------- FOOTER -------------------->
+  <footer class="section">
+    <div class="container grid">
+      <div class="brand">
+        <a class="logo logo-alt" href="#home">Med<span>Etec</span>.</a>
+        <p>&copy 2023 MedEtec.</p>
+        <p>Todos os direitos reservados.</p>
+      </div>
+
+      <div class="social grid">
+        <a href="#" target="_blank"><i class="fa-brands fa-square-google-plus"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#home" class="back-to-top"><i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+
+  <!-------------------- SWIPERJS -------------------->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-------------------- SCROLLREVEAL -------------------->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+
+  <!-------------------- SCRIPTJS -------------------->
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+/*==================== CSS RESET ====================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*==================== REMOVER ARROWS ====================*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*==================== BASE ====================*/
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+  background-color: #fff;
+  margin: 3rem auto;
+  padding: 1.25rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+legend {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #008000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group {
+  flex: 1 1 30%;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.form-group label {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #008000;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #008000;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #008000;
+  border-color: #008000;
+}
+
+select option:first-child {
+  color: gray;
+}
+
+select option:not(:first-child) {
+  color: black;
+}
+
+#enviar{
+  text-align: right;
+  align-items: center;
+
+}
+
+button[type='submit'] {
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button[type='submit']:hover {
+  background-color: #006400;
+}
