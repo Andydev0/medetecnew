@@ -10,12 +10,12 @@
   --header-height: 4.5rem;
 
   /* Colors */
-  --hue: 140;
+  --hue: 207;
   /* HSL color mode */
-  --base-color: hsl(var(--hue) 46% 47%);
-  --base-color-second: hsl(var(--hue) 65% 88%);
-  --base-color-alt: hsl(var(--hue) 57% 53%);
-  --title-color: hsl(var(--hue) 41% 10%);
+  --base-color: hsl(var(--hue) 65% 47%);
+  --base-color-second: hsl(var(--hue) 85% 88%);
+  --base-color-alt: hsl(var(--hue) 77% 53%);
+  --title-color: hsl(var(--hue) 61% 10%);
   --text-color: hsl(0 0% 26%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
@@ -203,7 +203,7 @@ nav ul li a::after {
 #header.scroll nav ul li a:hover,
 #header.scroll nav ul li a.active {
   color: var(--base-color-alt);
-} 
+}
 
 #header.scroll nav ul li a::after {
   content: '';
@@ -566,6 +566,7 @@ footer .social a:hover {
 /*==================== MEDIA QUERIES ====================*/
 /* extra large devices: 1200> */
 @media (min-width: 1080px) {
+
   /* Classes reutilizável */
   .container {
     max-width: 1120px;
@@ -576,8 +577,9 @@ footer .social a:hover {
   .section {
     padding: 10rem 0;
   }
-  
-  .section header, #testimonials header {
+
+  .section header,
+  #testimonials header {
     max-width: 32rem;
     text-align: center;
     margin-left: auto;
@@ -614,13 +616,13 @@ footer .social a:hover {
   #header.scroll nav .menu ul li a.title {
     color: #fff;
   }
-  
+
   nav .icon-menu {
     display: none;
   }
 
-   /* LAYOUT */
-   main {
+  /* LAYOUT */
+  main {
     margin-top: var(--header-height);
   }
 
@@ -650,7 +652,7 @@ footer .social a:hover {
 
   /* Services */
   .cards {
-    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .card {
@@ -686,7 +688,7 @@ footer .social a:hover {
   }
 
   footer .logo {
-    font-size:  2.25rem;
+    font-size: 2.25rem;
   }
 
   /* scroll */
@@ -700,7 +702,7 @@ footer .social a:hover {
     bottom: -1rem;
     transition: width 0.2s;
   }
-  
+
   #header.scroll nav ul li a:hover::after {
     width: 100%;
   }
@@ -714,6 +716,7 @@ footer .social a:hover {
     --subtitle-font-size: 1.125rem;
   }
 }
+
 /* medium devices: 767> */
 
 
@@ -739,8 +742,10 @@ footer .social a:hover {
   padding: 40px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 500px; /* altere o tamanho para o que desejar */
-  max-width: 90%; /* evita que o formulário seja maior do que a largura da tela */
+  width: 500px;
+  /* altere o tamanho para o que desejar */
+  max-width: 90%;
+  /* evita que o formulário seja maior do que a largura da tela */
 }
 
 #loginForm h2 {
@@ -754,15 +759,17 @@ footer .social a:hover {
 }
 
 #loginForm input[type="text"],
-#loginForm input[type="password"]{
+#loginForm input[type="password"] {
   display: block;
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
-  font-size: 16px; /* altere o tamanho da fonte para o que desejar */
-  padding-left: 30px; /* espaço entre o ícone e a borda esquerda da caixa de entrada */
+  font-size: 16px;
+  /* altere o tamanho da fonte para o que desejar */
+  padding-left: 30px;
+  /* espaço entre o ícone e a borda esquerda da caixa de entrada */
 }
 
 #loginForm input[type="text"]:focus,
@@ -780,7 +787,8 @@ footer .social a:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px; /* altere o tamanho da fonte para o que desejar */
+  font-size: 16px;
+  /* altere o tamanho da fonte para o que desejar */
   transition: background-color 0.3s ease;
 }
 
@@ -795,7 +803,8 @@ footer .social a:hover {
   margin-top: 20px;
   margin-bottom: 10px;
   color: #007bff;
-  font-size: 16px; /* altere o tamanho da fonte para o que desejar */
+  font-size: 16px;
+  /* altere o tamanho da fonte para o que desejar */
 }
 
 
@@ -809,4 +818,3 @@ footer .social a:hover {
   top: 50%;
   transform: translateY(-50%);
 }
-
