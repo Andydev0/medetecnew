@@ -36,7 +36,7 @@ legend {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #008000;
+  color: #297FC5;
   text-align: center;
   text-transform: uppercase;
 }
@@ -61,7 +61,7 @@ legend {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #008000;
+  color: #297FC5;
 }
 
 .form-group input,
@@ -70,7 +70,7 @@ legend {
   width: 100%;
   padding: 10px;
   font-size: 18px;
-  border: 2px solid #008000;
+  border: 2px solid #297FC5;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -79,8 +79,8 @@ legend {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  box-shadow: 0 0 5px #008000;
-  border-color: #008000;
+  box-shadow: 0 0 5px #297FC5;
+  border-color: #297FC5;
 }
 
 select option:first-child {
@@ -98,7 +98,7 @@ select option:not(:first-child) {
 }
 
 button[type='submit'] {
-  background-color: #008000;
+  background-color: #297FC5;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -109,5 +109,5 @@ button[type='submit'] {
 }
 
 button[type='submit']:hover {
-  background-color: #006400;
+  background-color: #003c64;
 }
